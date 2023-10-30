@@ -51,7 +51,7 @@ sudo mysql_secure_installation
 3. Move `sql/Create_tables.sql` file to your desired location (e.g., desktop).
 4. Create a `tmp` folder.
 5. Rename `config.sample.inc.php` to `config.inc.php`.
-6. Generate a `blowfish_secret` and add this line to `config.inc.php`: `$cfg['TempDir'] = '/tmp'.
+6. Generate a `blowfish_secret` and add this line to `config.inc.php`: `$cfg['TempDir'] = '/tmp';`
 7. Archive PHPMyAdmin and upload it to the server in `/usr/share`.
 
 ## Step 8: Install Zip, Unzip Tools And Unzip Phpmyadmin Archive
@@ -65,6 +65,17 @@ unzip phpmyadmin.zip
 ## Step 9: Configure Nginx and PHP
 
 Configure the `php.ini` file and Nginx site-available default file.
+
+```bash
+memory_limit, post_max_size, upload_max_filesize and etc.
+/etc/nginx/nginx.conf
+
+server {
+    client_max_body_size 8M;
+
+    //other lines...
+}
+```
 
 ## Step 10: Configure Nginx for PHPMyAdmin and Laravel
 
