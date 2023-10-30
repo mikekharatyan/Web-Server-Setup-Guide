@@ -187,7 +187,7 @@ sudo reboot
 After uploading your site files, use the following command to set the correct permissions:
 
 ```bash
-sudo chown -R www-data:www-data /path/to/your/site
+sudo chown -R www-data:www-data ./    -  IN YOUR PROJECT FOLDER
 ```
 
 Your server should now be set up and ready for your web applications. Enjoy your development or production environment!
