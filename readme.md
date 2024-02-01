@@ -31,7 +31,7 @@ sudo systemctl enable nginx
 ## Step 5: Install PHP and PHP Extensions
 
 ```bash
-sudo apt install php8.2-{fpm,cli,bcmath,bz2,curl,xml,mbstring,zip,gd,mysqli,pdo,mcrypt,imagick,intl,soap}
+sudo apt install php8.2-{fpm,cli,bcmath,bz2,curl,xml,mbstring,zip,gd,mysql,common,mcrypt,imagick,intl,soap}
 ```
 
 ## Step 6: Install MariaDB And Run Setup
@@ -170,15 +170,8 @@ sudo mv composer.phar /usr/local/bin/composer
 ## Step 14: Install Node.js with NVM
 
 ```bash
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
-source ~/.bashrc
-nvm list-remote
-nvm install v20.8.1
-
-Move the following lines to the top of .bashrc
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+curl -fsSL https://deb.nodesource.com/setup_21.x | sudo -E bash
+sudo apt-get install -y nodejs
 ```
 
 ## Step 15: Reboot Your System
