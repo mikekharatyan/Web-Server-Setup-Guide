@@ -31,7 +31,7 @@ sudo systemctl enable nginx
 ## Step 5: Install PHP and PHP Extensions
 
 ```bash
-sudo apt install php8.2-{fpm,cli,bcmath,bz2,curl,xml,mbstring,zip,gd,mysql,common,mcrypt,imagick,intl,soap}
+sudo apt install php8.3-{fpm,cli,bcmath,bz2,curl,xml,mbstring,zip,gd,mysql,common,mcrypt,imagick,intl,soap}
 ```
 
 ## Step 6: Install MariaDB And Run Setup
