@@ -170,7 +170,7 @@ sudo mv composer.phar /usr/local/bin/composer
 ## Step 14: Install Node.js with NVM
 
 ```bash
-curl -fsSL https://deb.nodesource.com/setup_21.x | sudo -E bash
+curl -fsSL https://deb.nodesource.com/setup_23.x | sudo -E bash
 sudo apt-get install -y nodejs
 ```
 
